@@ -63,8 +63,8 @@ bibliosphere_backend/
 ├── user/                  # Custom User model and user management
 ├── book/                  # Book models and business logic
 ├── loan/                  # Borrowing and returning system
-├── utils/                 # Utility functions
-├── static/                # Static files
+├── report/                # Reports
+├── staticfiles/           # Static files
 └── media/                 # Media files (e.g., book images)
 ```
 
@@ -72,11 +72,11 @@ bibliosphere_backend/
 
 Method	| URL	| Description
 ---|---|---
-POST|	/api/auth/register/	|Register a new user
-POST|	/api/auth/login/	|Obtain JWT token
-GET|	/api/books/	|List all books
-POST|	/api/loan/borrow/	|Borrow a book
-POST|	/api/loan/return/	|Return a borrowed book
+POST|	/user/register/	      |Register a new user
+POST|	/user/signin/  	      |Obtain JWT token
+GET|	/book/books/	        |List all books
+POST|	/loans/loans/borrow/	|Borrow a book
+GET|	/report/report/	      |Downoad a general report
 
 ## ✅ Running Tests
 
