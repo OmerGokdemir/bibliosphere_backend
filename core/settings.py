@@ -29,15 +29,16 @@ DEBUG = getenv("IS_DEVELOPMENT", True)
 
 
 ALLOWED_HOSTS = [
-    getenv("APP_HOST"),
-    'localhost', 
-    '127.0.0.1'
+    os.getenv("APP_HOST"),
+    'localhost',
+    '127.0.0.1',
+    'skyiron.pythonanywhere.com',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://loacalhost:3000',
+    'http://localhost:3000',
+    'https://skyiron.pythonanywhere.com',
 ]
-
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -146,6 +147,7 @@ import os
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL ='/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
